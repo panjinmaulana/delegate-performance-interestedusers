@@ -33,72 +33,208 @@ export default function Home() {
         ></script>
       </Head>
 
-      <SideNav
-        onSelect={(selected) => {
-          // Add your code here
-        }}
-        style={{
-          background: "#FFFFFF",
-          boxShadow:
-            "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
-          borderRadius: "40px",
-        }}
-      >
-        <SideNav.Toggle style={{ color: "#666" }} />
-        <SideNav.Nav defaultSelected="overview">
-          <NavItem eventKey="overview">
-            <NavIcon>
-              <img src="./assets/overview.svg" alt="overview" />
-            </NavIcon>
-            <NavText style={{ color: "#666" }}>OVERVIEW</NavText>
-          </NavItem>
-          <NavItem eventKey="business">
-            <NavIcon>
-              <img src="./assets/business.svg" alt="business" />
-            </NavIcon>
-            <NavText style={{ color: "#666" }}>BUSINESS</NavText>
-          </NavItem>
-          <NavItem eventKey="inbox">
-            <NavIcon>
-              <img src="./assets/inbox.svg" alt="inbox" />
-            </NavIcon>
-            <NavText style={{ color: "#666" }}>INBOX</NavText>
-          </NavItem>
-          <NavItem eventKey="collaborators">
-            <NavIcon>
-              <img src="./assets/collaborators.svg" alt="collaborators" />
-            </NavIcon>
-            <NavText style={{ color: "#666" }}>COLLABORATORS</NavText>
-          </NavItem>
-          <NavItem eventKey="performance">
-            <NavIcon>
-              <img src="./assets/performance.svg" alt="performance" />
-            </NavIcon>
-            <NavText style={{ color: "#666" }}>PERFORMANCE</NavText>
-            <NavItem eventKey="performance/summary">
-              <NavText style={{ color: "#666" }}>SUMMARY</NavText>
-            </NavItem>
-            <NavItem eventKey="performance/credits">
-              <NavText style={{ color: "#666" }}>CREDITS</NavText>
-            </NavItem>
-            <NavItem eventKey="performance/interestedUsers">
-              <NavText style={{ color: "#666" }}>INTERESTED USERS</NavText>
-            </NavItem>
-          </NavItem>
-          <NavItem eventKey="billing">
-            <NavIcon>
-              <img src="./assets/billing.svg" alt="billing" />
-            </NavIcon>
-            <NavText style={{ color: "#666" }}>BILLING</NavText>
-          </NavItem>
-          <NavItem eventKey="support">
-            <NavIcon>
-              <img src="./assets/support.svg" alt="support" />
-            </NavIcon>
-            <NavText style={{ color: "#666" }}>SUPPORT</NavText>
-          </NavItem>
-        </SideNav.Nav>
-      </SideNav>
+      <div className="row">
+        <div className="col-3">
+          <SideNav
+            onSelect={(selected) => {
+              // Add your code here
+            }}
+            style={{
+              background: "#FFFFFF",
+              boxShadow:
+                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+              borderRadius: "40px",
+            }}
+          >
+            <SideNav.Toggle style={{ color: "#666" }} />
+            <SideNav.Nav defaultSelected="performance">
+              <NavItem eventKey="overview">
+                <NavIcon>
+                  <img src="./assets/overview.svg" alt="overview" />
+                </NavIcon>
+                <NavText style={{ color: "#666" }}>OVERVIEW</NavText>
+              </NavItem>
+              <NavItem eventKey="business">
+                <NavIcon>
+                  <img src="./assets/business.svg" alt="business" />
+                </NavIcon>
+                <NavText style={{ color: "#666" }}>BUSINESS</NavText>
+              </NavItem>
+              <NavItem eventKey="inbox">
+                <NavIcon>
+                  <img src="./assets/inbox.svg" alt="inbox" />
+                </NavIcon>
+                <NavText style={{ color: "#666" }}>INBOX</NavText>
+              </NavItem>
+              <NavItem eventKey="collaborators">
+                <NavIcon>
+                  <img src="./assets/collaborators.svg" alt="collaborators" />
+                </NavIcon>
+                <NavText style={{ color: "#666" }}>COLLABORATORS</NavText>
+              </NavItem>
+              <NavItem eventKey="performance">
+                <NavIcon>
+                  <img src="./assets/performance.svg" alt="performance" />
+                </NavIcon>
+                <NavText style={{ color: "#666" }}>PERFORMANCE</NavText>
+                <NavItem eventKey="performance/summary">
+                  <NavText style={{ color: "#666" }}>SUMMARY</NavText>
+                </NavItem>
+                <NavItem eventKey="performance/credits">
+                  <NavText style={{ color: "#666" }}>CREDITS</NavText>
+                </NavItem>
+                <NavItem eventKey="performance/interestedUsers">
+                  <NavText style={{ color: "#666" }}>INTERESTED USERS</NavText>
+                </NavItem>
+              </NavItem>
+              <NavItem eventKey="billing">
+                <NavIcon>
+                  <img src="./assets/billing.svg" alt="billing" />
+                </NavIcon>
+                <NavText style={{ color: "#666" }}>BILLING</NavText>
+              </NavItem>
+              <NavItem eventKey="support">
+                <NavIcon>
+                  <img src="./assets/support.svg" alt="support" />
+                </NavIcon>
+                <NavText style={{ color: "#666" }}>SUPPORT</NavText>
+              </NavItem>
+            </SideNav.Nav>
+          </SideNav>
+        </div>
+        <div className="col">
+          <div className="d-flex">
+            <div className="align-self-center">
+              <img src="../assets/pencil.svg" alt="" />
+            </div>
+            <div>
+              <p style={{ fontSize: "11px" }}>PERFORMANCE</p>
+              <p>Interested Users</p>
+            </div>
+          </div>
+          <div
+            className="d-flex justify-content-between bd-highlight my-2"
+            style={{
+              width: "100%",
+            }}
+          >
+            <div
+              className="bd-highlight"
+              style={{
+                marginRight: "124px",
+              }}
+            >
+              ID
+            </div>
+            <div className="bd-highlight" style={{ marginRight: "175px" }}>
+              EMAIL
+            </div>
+            <div className="flex-grow-1 bd-highlight">NAME</div>
+          </div>
+
+          <div
+            className="d-flex justify-content-between bd-highlight my-2"
+            style={{
+              //   border: "1px solid black",
+              width: "100%",
+              backgroundColor: "#FFFFFF",
+              boxShadow:
+                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+              borderRadius: "12px",
+            }}
+          >
+            <div
+              className="bd-highlight "
+              style={{
+                padding: "20px 0",
+                marginRight: "124px",
+              }}
+            >
+              1
+            </div>
+            <div
+              className="bd-highlight"
+              style={{ padding: "20px 0", marginRight: "124px" }}
+            >
+              test@test.mail
+            </div>
+            <div
+              className="flex-grow-1 bd-highlight"
+              style={{ padding: "20px 0" }}
+            >
+              Panji Maulana
+            </div>
+          </div>
+
+          <div
+            className="d-flex justify-content-between bd-highlight my-2"
+            style={{
+              //   border: "1px solid black",
+              width: "100%",
+              backgroundColor: "#FFFFFF",
+              boxShadow:
+                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+              borderRadius: "12px",
+            }}
+          >
+            <div
+              className="bd-highlight"
+              style={{
+                padding: "20px 0",
+                marginRight: "124px",
+              }}
+            >
+              1
+            </div>
+            <div
+              className="bd-highlight"
+              style={{ padding: "20px 0", marginRight: "124px" }}
+            >
+              test@test.mail
+            </div>
+            <div
+              className="flex-grow-1 bd-highlight"
+              style={{ padding: "20px 0" }}
+            >
+              Panji Maulana
+            </div>
+          </div>
+
+          <div
+            className="d-flex justify-content-between bd-highlight my-2"
+            style={{
+              //   border: "1px solid black",
+              width: "100%",
+              backgroundColor: "#FFFFFF",
+              boxShadow:
+                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+              borderRadius: "12px",
+            }}
+          >
+            <div
+              className="bd-highlight"
+              style={{
+                padding: "20px 0",
+                marginRight: "124px",
+              }}
+            >
+              1
+            </div>
+            <div
+              className="bd-highlight"
+              style={{ padding: "20px 0", marginRight: "124px" }}
+            >
+              test@test.mail
+            </div>
+            <div
+              className="flex-grow-1 bd-highlight"
+              style={{ padding: "20px 0" }}
+            >
+              Panji Maulana
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
