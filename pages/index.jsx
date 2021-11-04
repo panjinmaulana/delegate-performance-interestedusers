@@ -13,7 +13,7 @@ import SideNav, {
 // Be sure to include styles at some point, probably during your bootstraping
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -46,6 +46,16 @@ export default function Home() {
               borderRadius: "40px",
             }}
           >
+            <SideNav.Toggle
+              style={{
+                marginTop: "30px",
+                marginLeft: "24px",
+                backgroundColor: "#7DB7B4",
+                borderRadius: "50%",
+                width: "30px",
+                height: "30px",
+              }}
+            />
             <div
               style={{
                 marginTop: "25px",
@@ -81,8 +91,10 @@ export default function Home() {
                 </p>
               </p>
             </div>
-            <SideNav.Toggle />
-            <SideNav.Nav defaultSelected="performance">
+            <SideNav.Nav
+              defaultSelected="performance"
+              style={{ marginTop: "-10px" }}
+            >
               <NavItem eventKey="overview">
                 <NavIcon>
                   <img src="./assets/overview.svg" alt="overview" />
@@ -119,7 +131,9 @@ export default function Home() {
                   <NavText style={{ color: "#666" }}>CREDITS</NavText>
                 </NavItem>
                 <NavItem eventKey="performance/interestedUsers">
-                  <NavText style={{ color: "#666" }}>INTERESTED USERS</NavText>
+                  <NavText style={{ color: "#7DB7B4" }}>
+                    INTERESTED USERS
+                  </NavText>
                 </NavItem>
               </NavItem>
               <NavItem eventKey="billing">
@@ -146,6 +160,7 @@ export default function Home() {
             />
             <div className="mt-3">
               <p
+                className="mt-2"
                 style={{
                   fontFamily: "Gotham",
                   fontSize: "11px",
@@ -159,6 +174,7 @@ export default function Home() {
                   fontFamily: "Gotham",
                   fontSize: "25px",
                   fontWeight: "550",
+                  marginTop: "-15px",
                 }}
               >
                 Interested Users
@@ -199,7 +215,7 @@ export default function Home() {
               className="bd-highlight"
               style={{
                 marginLeft: "15px",
-                marginRight: "124px",
+                marginRight: "205px",
                 color: "#7983A5",
                 fontSize: "12px",
                 fontWeight: "700",
@@ -210,7 +226,7 @@ export default function Home() {
             <div
               className="bd-highlight"
               style={{
-                marginRight: "175px",
+                marginRight: "205px",
                 color: "#7983A5",
                 fontSize: "12px",
                 fontWeight: "700",
@@ -226,302 +242,69 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="d-flex justify-content-between bd-highlight my-2"
-            style={{
-              //   border: "1px solid black",
-              width: "100%",
-              backgroundColor: "#FFFFFF",
-              boxShadow:
-                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
-              borderRadius: "12px",
-              //   border: "1px solid rgba(102, 102, 102, 0.1)",
-            }}
-          >
-            <div
-              className="bd-highlight "
-              style={{
-                marginLeft: "15px",
-                padding: "20px 0",
-                marginRight: "129px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              1
-            </div>
-            <div
-              className="bd-highlight"
-              style={{
-                padding: "20px 0",
-                marginRight: "137px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              test@test.mail
-            </div>
-            <div
-              className="flex-grow-1 bd-highlight"
-              style={{
-                padding: "20px 0",
-                fontFamily: "Gotham",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              Panji Maulana
-            </div>
-          </div>
-
-          <div
-            className="d-flex justify-content-between bd-highlight my-2"
-            style={{
-              //   border: "1px solid black",
-              width: "100%",
-              backgroundColor: "#FFFFFF",
-              boxShadow:
-                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
-              borderRadius: "12px",
-              //   border: "1px solid rgba(102, 102, 102, 0.1)",
-            }}
-          >
-            <div
-              className="bd-highlight "
-              style={{
-                marginLeft: "15px",
-                padding: "20px 0",
-                marginRight: "129px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              1
-            </div>
-            <div
-              className="bd-highlight"
-              style={{
-                padding: "20px 0",
-                marginRight: "137px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              test@test.mail
-            </div>
-            <div
-              className="flex-grow-1 bd-highlight"
-              style={{
-                padding: "20px 0",
-                fontFamily: "Gotham",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              Panji Maulana
-            </div>
-          </div>
-
-          <div
-            className="d-flex justify-content-between bd-highlight my-2"
-            style={{
-              //   border: "1px solid black",
-              width: "100%",
-              backgroundColor: "#FFFFFF",
-              boxShadow:
-                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
-              borderRadius: "12px",
-              //   border: "1px solid rgba(102, 102, 102, 0.1)",
-            }}
-          >
-            <div
-              className="bd-highlight "
-              style={{
-                marginLeft: "15px",
-                padding: "20px 0",
-                marginRight: "129px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              1
-            </div>
-            <div
-              className="bd-highlight"
-              style={{
-                padding: "20px 0",
-                marginRight: "137px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              test@test.mail
-            </div>
-            <div
-              className="flex-grow-1 bd-highlight"
-              style={{
-                padding: "20px 0",
-                fontFamily: "Gotham",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              Panji Maulana
-            </div>
-          </div>
-
-          <div
-            className="d-flex justify-content-between bd-highlight my-2"
-            style={{
-              //   border: "1px solid black",
-              width: "100%",
-              backgroundColor: "#FFFFFF",
-              boxShadow:
-                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
-              borderRadius: "12px",
-              //   border: "1px solid rgba(102, 102, 102, 0.1)",
-            }}
-          >
-            <div
-              className="bd-highlight "
-              style={{
-                marginLeft: "15px",
-                padding: "20px 0",
-                marginRight: "129px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              1
-            </div>
-            <div
-              className="bd-highlight"
-              style={{
-                padding: "20px 0",
-                marginRight: "137px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              test@test.mail
-            </div>
-            <div
-              className="flex-grow-1 bd-highlight"
-              style={{
-                padding: "20px 0",
-                fontFamily: "Gotham",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              Panji Maulana
-            </div>
-          </div>
-
-          <div
-            className="d-flex justify-content-between bd-highlight my-2"
-            style={{
-              //   border: "1px solid black",
-              width: "100%",
-              backgroundColor: "#FFFFFF",
-              boxShadow:
-                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
-              borderRadius: "12px",
-              //   border: "1px solid rgba(102, 102, 102, 0.1)",
-            }}
-          >
-            <div
-              className="bd-highlight "
-              style={{
-                marginLeft: "15px",
-                padding: "20px 0",
-                marginRight: "129px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              1
-            </div>
-            <div
-              className="bd-highlight"
-              style={{
-                padding: "20px 0",
-                marginRight: "137px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              test@test.mail
-            </div>
-            <div
-              className="flex-grow-1 bd-highlight"
-              style={{
-                padding: "20px 0",
-                fontFamily: "Gotham",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              Panji Maulana
-            </div>
-          </div>
-
-          <div
-            className="d-flex justify-content-between bd-highlight my-2"
-            style={{
-              //   border: "1px solid black",
-              width: "100%",
-              backgroundColor: "#FFFFFF",
-              boxShadow:
-                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
-              borderRadius: "12px",
-              //   border: "1px solid rgba(102, 102, 102, 0.1)",
-            }}
-          >
-            <div
-              className="bd-highlight "
-              style={{
-                marginLeft: "15px",
-                padding: "20px 0",
-                marginRight: "129px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              1
-            </div>
-            <div
-              className="bd-highlight"
-              style={{
-                padding: "20px 0",
-                marginRight: "137px",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              test@test.mail
-            </div>
-            <div
-              className="flex-grow-1 bd-highlight"
-              style={{
-                padding: "20px 0",
-                fontFamily: "Gotham",
-                fontSize: "11px",
-                fontWeight: "700",
-              }}
-            >
-              Panji Maulana
-            </div>
-          </div>
+          {data.data &&
+            data.data.map((el) => {
+              return (
+                <div
+                  key={el.id}
+                  className="d-flex justify-content-between bd-highlight my-2"
+                  style={{
+                    //   border: "1px solid black",
+                    width: "100%",
+                    height: "50px",
+                    backgroundColor: "#FFFFFF",
+                    boxShadow:
+                      "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+                    borderRadius: "12px",
+                    //   border: "1px solid rgba(102, 102, 102, 0.1)",
+                  }}
+                >
+                  <div
+                    className="flex-grow-1 bd-highlight"
+                    style={{
+                      marginLeft: "15px",
+                      padding: "17px 0",
+                      fontSize: "12px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {el.id}
+                  </div>
+                  <div
+                    className="flex-grow-1 bd-highlight"
+                    style={{
+                      padding: "17px 0",
+                      fontSize: "12px",
+                      fontWeight: "600",
+                      marginLeft: "-200px",
+                    }}
+                  >
+                    {el.email}
+                  </div>
+                  <div
+                    className="flex-grow-1 bd-highlight"
+                    style={{
+                      padding: "17px 0",
+                      fontFamily: "Gotham",
+                      fontSize: "12px",
+                      fontWeight: "600",
+                      marginLeft: "-230px",
+                    }}
+                  >
+                    {`${el.first_name} ${el.last_name}`}
+                  </div>
+                </div>
+              );
+            })}
 
           <div class="pagination">
             <a href="#">
               <img src="./assets/arrow_left.svg" alt="" />
             </a>
-            <a href="#">1</a>
             <a href="#" class="active">
-              2
+              1
             </a>
+            <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
@@ -534,4 +317,13 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://reqres.in/api/users?page=1`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
 }

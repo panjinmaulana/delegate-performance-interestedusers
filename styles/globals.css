@@ -46,11 +46,11 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: end;
-  height: 200px;
+  /* height: 200px; */
 }
 
 .pagination a {
-  color: black;
+  color: #666;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
