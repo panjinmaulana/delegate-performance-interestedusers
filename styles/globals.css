@@ -16,6 +16,21 @@ a {
   box-sizing: border-box;
 }
 
+input[type="text"] {
+  width: 305px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 1px solid #666;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgba(102, 102, 102, 0.04);
+  background-image: url("../public/assets/search.svg");
+  background-position: 10px 7px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  border-radius: 13.5px;
+}
+
 #table-user {
   margin-left: auto;
   margin-right: auto;
@@ -24,4 +39,30 @@ a {
 #table-user th {
   border: 1px solid rgb(0, 0, 0);
   padding: 8px;
+}
+
+.pagination {
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 200px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #7db7b4;
+  color: white;
+  border-radius: 50%;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
 }

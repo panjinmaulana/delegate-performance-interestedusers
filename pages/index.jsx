@@ -104,14 +104,30 @@ export default function Home() {
         </div>
         <div className="col">
           <div className="d-flex">
-            <div className="align-self-center">
-              <img src="../assets/pencil.svg" alt="" />
-            </div>
-            <div>
+            <img
+              src="../assets/pencil.svg"
+              alt=""
+              className="align-self-center me-3"
+            />
+            <div className="mt-3">
               <p style={{ fontSize: "11px" }}>PERFORMANCE</p>
               <p>Interested Users</p>
             </div>
           </div>
+
+          <form style={{ textAlign: "right" }}>
+            <input
+              type="text"
+              name="search"
+              placeholder="Search by email or name"
+              style={{
+                fontSize: "11px",
+              }}
+            />
+          </form>
+
+          <h6>INTERESTED USERS</h6>
+
           <div
             className="d-flex justify-content-between bd-highlight my-2"
             style={{
@@ -141,6 +157,7 @@ export default function Home() {
               boxShadow:
                 "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
               borderRadius: "12px",
+              //   border: "1px solid rgba(102, 102, 102, 0.1)",
             }}
           >
             <div
@@ -232,6 +249,23 @@ export default function Home() {
             >
               Panji Maulana
             </div>
+          </div>
+
+          <div class="pagination">
+            <a href="#">
+              <img src="./assets/arrow_left.svg" alt="" />
+            </a>
+            <a href="#">1</a>
+            <a href="#" class="active">
+              2
+            </a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">
+              <img src="./assets/arrow_right.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>
