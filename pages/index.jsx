@@ -46,7 +46,42 @@ export default function Home() {
               borderRadius: "40px",
             }}
           >
-            <SideNav.Toggle style={{ color: "#666" }} />
+            <div
+              style={{
+                marginTop: "25px",
+                marginLeft: "80px",
+                width: "73px",
+                height: "73px",
+                border: "3px solid #7DB7B4",
+                borderRadius: "50%",
+                textAlign: "center",
+                //   padding: "24px",
+                //   marginRight: "50px",
+              }}
+            >
+              <h4 style={{ textAlign: "center", paddingTop: "20px" }}>KO</h4>
+            </div>
+            <div className="my-2" style={{ textAlign: "center" }}>
+              <p
+                style={{
+                  fontFamily: "Gotham",
+                  fontSize: "12px",
+                  fontWeight: "800",
+                }}
+              >
+                KINKY OSTENDORF <br />{" "}
+                <p
+                  style={{
+                    fontFamily: "Gotham",
+                    fontSize: "10px",
+                    fontWeight: "400",
+                  }}
+                >
+                  kinkysfruitlab@outlook.com
+                </p>
+              </p>
+            </div>
+            <SideNav.Toggle />
             <SideNav.Nav defaultSelected="performance">
               <NavItem eventKey="overview">
                 <NavIcon>
@@ -103,15 +138,31 @@ export default function Home() {
           </SideNav>
         </div>
         <div className="col">
-          <div className="d-flex">
+          <div className="d-flex mt-3">
             <img
               src="../assets/pencil.svg"
               alt=""
-              className="align-self-center me-3"
+              className="align-self-center me-2"
             />
             <div className="mt-3">
-              <p style={{ fontSize: "11px" }}>PERFORMANCE</p>
-              <p>Interested Users</p>
+              <p
+                style={{
+                  fontFamily: "Gotham",
+                  fontSize: "11px",
+                  fontWeight: "550",
+                }}
+              >
+                PERFORMANCE
+              </p>
+              <p
+                style={{
+                  fontFamily: "Gotham",
+                  fontSize: "25px",
+                  fontWeight: "550",
+                }}
+              >
+                Interested Users
+              </p>
             </div>
           </div>
 
@@ -122,11 +173,21 @@ export default function Home() {
               placeholder="Search by email or name"
               style={{
                 fontSize: "11px",
+                fontWeight: "400",
               }}
             />
           </form>
 
-          <h6>INTERESTED USERS</h6>
+          <p
+            style={{
+              fontFamily: "Gotham",
+              fontSize: "15px",
+              fontWeight: "550",
+              paddingLeft: "15px",
+            }}
+          >
+            INTERESTED USERS
+          </p>
 
           <div
             className="d-flex justify-content-between bd-highlight my-2"
@@ -137,15 +198,32 @@ export default function Home() {
             <div
               className="bd-highlight"
               style={{
+                marginLeft: "15px",
                 marginRight: "124px",
+                color: "#7983A5",
+                fontSize: "12px",
+                fontWeight: "700",
               }}
             >
               ID
             </div>
-            <div className="bd-highlight" style={{ marginRight: "175px" }}>
+            <div
+              className="bd-highlight"
+              style={{
+                marginRight: "175px",
+                color: "#7983A5",
+                fontSize: "12px",
+                fontWeight: "700",
+              }}
+            >
               EMAIL
             </div>
-            <div className="flex-grow-1 bd-highlight">NAME</div>
+            <div
+              className="flex-grow-1 bd-highlight"
+              style={{ color: "#7983A5", fontSize: "12px", fontWeight: "700" }}
+            >
+              NAME
+            </div>
           </div>
 
           <div
@@ -163,21 +241,34 @@ export default function Home() {
             <div
               className="bd-highlight "
               style={{
+                marginLeft: "15px",
                 padding: "20px 0",
-                marginRight: "124px",
+                marginRight: "129px",
+                fontSize: "11px",
+                fontWeight: "700",
               }}
             >
               1
             </div>
             <div
               className="bd-highlight"
-              style={{ padding: "20px 0", marginRight: "124px" }}
+              style={{
+                padding: "20px 0",
+                marginRight: "137px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
             >
               test@test.mail
             </div>
             <div
               className="flex-grow-1 bd-highlight"
-              style={{ padding: "20px 0" }}
+              style={{
+                padding: "20px 0",
+                fontFamily: "Gotham",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
             >
               Panji Maulana
             </div>
@@ -192,26 +283,40 @@ export default function Home() {
               boxShadow:
                 "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
               borderRadius: "12px",
+              //   border: "1px solid rgba(102, 102, 102, 0.1)",
             }}
           >
             <div
-              className="bd-highlight"
+              className="bd-highlight "
               style={{
+                marginLeft: "15px",
                 padding: "20px 0",
-                marginRight: "124px",
+                marginRight: "129px",
+                fontSize: "11px",
+                fontWeight: "700",
               }}
             >
               1
             </div>
             <div
               className="bd-highlight"
-              style={{ padding: "20px 0", marginRight: "124px" }}
+              style={{
+                padding: "20px 0",
+                marginRight: "137px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
             >
               test@test.mail
             </div>
             <div
               className="flex-grow-1 bd-highlight"
-              style={{ padding: "20px 0" }}
+              style={{
+                padding: "20px 0",
+                fontFamily: "Gotham",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
             >
               Panji Maulana
             </div>
@@ -226,26 +331,184 @@ export default function Home() {
               boxShadow:
                 "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
               borderRadius: "12px",
+              //   border: "1px solid rgba(102, 102, 102, 0.1)",
             }}
           >
             <div
-              className="bd-highlight"
+              className="bd-highlight "
               style={{
+                marginLeft: "15px",
                 padding: "20px 0",
-                marginRight: "124px",
+                marginRight: "129px",
+                fontSize: "11px",
+                fontWeight: "700",
               }}
             >
               1
             </div>
             <div
               className="bd-highlight"
-              style={{ padding: "20px 0", marginRight: "124px" }}
+              style={{
+                padding: "20px 0",
+                marginRight: "137px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
             >
               test@test.mail
             </div>
             <div
               className="flex-grow-1 bd-highlight"
-              style={{ padding: "20px 0" }}
+              style={{
+                padding: "20px 0",
+                fontFamily: "Gotham",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              Panji Maulana
+            </div>
+          </div>
+
+          <div
+            className="d-flex justify-content-between bd-highlight my-2"
+            style={{
+              //   border: "1px solid black",
+              width: "100%",
+              backgroundColor: "#FFFFFF",
+              boxShadow:
+                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+              borderRadius: "12px",
+              //   border: "1px solid rgba(102, 102, 102, 0.1)",
+            }}
+          >
+            <div
+              className="bd-highlight "
+              style={{
+                marginLeft: "15px",
+                padding: "20px 0",
+                marginRight: "129px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              1
+            </div>
+            <div
+              className="bd-highlight"
+              style={{
+                padding: "20px 0",
+                marginRight: "137px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              test@test.mail
+            </div>
+            <div
+              className="flex-grow-1 bd-highlight"
+              style={{
+                padding: "20px 0",
+                fontFamily: "Gotham",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              Panji Maulana
+            </div>
+          </div>
+
+          <div
+            className="d-flex justify-content-between bd-highlight my-2"
+            style={{
+              //   border: "1px solid black",
+              width: "100%",
+              backgroundColor: "#FFFFFF",
+              boxShadow:
+                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+              borderRadius: "12px",
+              //   border: "1px solid rgba(102, 102, 102, 0.1)",
+            }}
+          >
+            <div
+              className="bd-highlight "
+              style={{
+                marginLeft: "15px",
+                padding: "20px 0",
+                marginRight: "129px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              1
+            </div>
+            <div
+              className="bd-highlight"
+              style={{
+                padding: "20px 0",
+                marginRight: "137px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              test@test.mail
+            </div>
+            <div
+              className="flex-grow-1 bd-highlight"
+              style={{
+                padding: "20px 0",
+                fontFamily: "Gotham",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              Panji Maulana
+            </div>
+          </div>
+
+          <div
+            className="d-flex justify-content-between bd-highlight my-2"
+            style={{
+              //   border: "1px solid black",
+              width: "100%",
+              backgroundColor: "#FFFFFF",
+              boxShadow:
+                "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
+              borderRadius: "12px",
+              //   border: "1px solid rgba(102, 102, 102, 0.1)",
+            }}
+          >
+            <div
+              className="bd-highlight "
+              style={{
+                marginLeft: "15px",
+                padding: "20px 0",
+                marginRight: "129px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              1
+            </div>
+            <div
+              className="bd-highlight"
+              style={{
+                padding: "20px 0",
+                marginRight: "137px",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
+            >
+              test@test.mail
+            </div>
+            <div
+              className="flex-grow-1 bd-highlight"
+              style={{
+                padding: "20px 0",
+                fontFamily: "Gotham",
+                fontSize: "11px",
+                fontWeight: "700",
+              }}
             >
               Panji Maulana
             </div>
