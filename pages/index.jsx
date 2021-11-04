@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Router from "next/router";
 import styles from "../styles/Home.module.css";
 
 import SideNav, {
@@ -297,19 +297,15 @@ export default function Home({ data }) {
               );
             })}
 
-          <div class="pagination">
-            <a href="#">
+          <div className="pagination">
+            <a onClick={() => Router.push("/?page=prev")}>
               <img src="./assets/arrow_left.svg" alt="" />
             </a>
-            <a href="#" class="active">
+            <a onClick={() => Router.push("/?page=1")} className="active">
               1
             </a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">
+            <a onClick={() => Router.push("/?page=2")}>2</a>
+            <a onClick={() => Router.push("/?page=next")}>
               <img src="./assets/arrow_right.svg" alt="" />
             </a>
           </div>
@@ -319,10 +315,22 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ query }) {
+  let { page } = query;
+  let currentPage = 1;
+
+  if (page === "prev") {
+    page = currentPage - 1;
+  } else if (page === "next") {
+    page = currentPage + 1;
+  } else {
+    page;
+  }
   // Fetch data from external API
-  const res = await fetch(`https://reqres.in/api/users?page=1`);
+  const res = await fetch(`https://reqres.in/api/users?page=${page}`);
   const data = await res.json();
+
+  currentPage = data.page;
 
   // Pass data to the page via props
   return { props: { data } };
