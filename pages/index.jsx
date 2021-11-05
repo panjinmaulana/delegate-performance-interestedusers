@@ -65,8 +65,6 @@ export default function Home({ data }) {
                 border: "3px solid #7DB7B4",
                 borderRadius: "50%",
                 textAlign: "center",
-                //   padding: "24px",
-                //   marginRight: "50px",
               }}
             >
               <h4 style={{ textAlign: "center", paddingTop: "20px" }}>KO</h4>
@@ -249,14 +247,12 @@ export default function Home({ data }) {
                   key={el.id}
                   className="d-flex justify-content-between bd-highlight my-2"
                   style={{
-                    //   border: "1px solid black",
                     width: "100%",
                     height: "50px",
                     backgroundColor: "#FFFFFF",
                     boxShadow:
                       "-12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.15)",
                     borderRadius: "12px",
-                    //   border: "1px solid rgba(102, 102, 102, 0.1)",
                   }}
                 >
                   <div
